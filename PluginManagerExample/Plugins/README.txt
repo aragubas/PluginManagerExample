@@ -1,1 +1,1 @@
-﻿This folder contains all plugins' source files.
+﻿This directory contains all plugin files!
