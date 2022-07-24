@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PluginCore;
 
 namespace DefaultCommandProcessor.Built_In
 {
@@ -15,9 +11,14 @@ namespace DefaultCommandProcessor.Built_In
 
     static class BuiltInCommands
     {
-        public static Dictionary<string, IBuiltInCommand> builtIns = new() 
+        public static ExecutingContext context;
+
+        public static Dictionary<string, IBuiltInCommand> builtIns = new()
         {
-            { "help", new Help() }
+            { "help", new Help() },
+            { "clear", new Clear() },
+            { "about", new About() }
         };
+
     }
 }

@@ -14,18 +14,16 @@ namespace HelloPlugin
             Metadata = new PluginInformation() { Name = "HelloPlugin",
                                                  Description = "Hello World in a Plugin!",
                                                  IsCommandProcessor = false,
-                                                 Version = new PluginVersion(1, 0, 0)
+                                                 Version = new PluginVersion(1, 0, 1)
             };
         }
 
-        public void SayHello()
+        public void Run(object[]? arguments = null)
         {
             Counter++;
 
-            Console.WriteLine($"Hewooo World, the counter is: {Counter}");
+            Console.WriteLine($"Hewooo World, the count is: {Counter}");
         }
-
-        public void Run(string[]? arguments = null) => SayHello();
 
         public PluginInitialization Initialize(ref ExecutingContext context)
         {
